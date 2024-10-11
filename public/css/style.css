@@ -1,0 +1,60 @@
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* All Style For Navbar */
+.navbar {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid rgba(100, 255, 130, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+}
+.navbar h1{
+    background: text linear-gradient(to left, rgb(255, 255, 255), rgb(100, 255, 130), rgb(0, 152, 0), rgb(255, 0, 0));
+    animation: animated 6s linear infinite;
+    display: inline;
+    color: transparent;
+}
+@keyframes animated {
+    to {
+        background-position-x: 500px;
+    }
+}
+.navbar input {
+    width: 330px;
+    height: 40px;
+    padding: 20px;
+    outline: none;
+    border: none;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    color: #48ff5e;
+    box-shadow: 3px 3px 20px rgba(255, 255, 255, 0.5);
+}
+
+.navbar input::placeholder {
+    color: snow;
+    padding: 10px;
+}
+
+.navbar input:focus {
+    box-shadow: 3px 3px 10px rgba(100, 255, 130, 0.5), -3px -3px 10px rgba(100, 255, 130, 0.5);
+    backdrop-filter: blur(0);
+}
+
+.navbar input:hover::placeholder {
+    color: rgb(72, 255, 94);
+    font-size: 1rem;
+    transition: all 0.3s linear;
+}
+
+.navbar i {
+    position: relative;
+    left: 30px;
+}
