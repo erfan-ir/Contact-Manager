@@ -1,6 +1,46 @@
+:root {
+    --primary: #121212;
+    --secoundary: #fecc1b;
+    --tertiary: #f44250;
+    --quaternary: #6bd968;
+    --quinary: #d83bd2;
+    --senary: #818181;
+    --septenary: #c8c8c8;
+    --octonary: #fffafa;
+    --nonary: #383838;
+    --denary: #007bff;
+}
+
+input {
+    width: 330px;
+    height: 40px;
+    padding: 20px;
+    outline: none;
+    border: none;
+    background-color: var(--nonary);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    color: var(--quaternary);
+    font-size: 1.3rem;
+}
+
+
+
 .container {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1400px;
+    color: var(--septenary);
+}
+
+.contacts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contacts-container>div {
+    margin: 10px;
 }
 
 /* All Style For Navbar */
@@ -10,51 +50,266 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    border: 1px solid rgba(100, 255, 130, 0.5);
+    border: 1px solid var(--nonary);
     border-radius: 10px;
     backdrop-filter: blur(2px);
 }
-.navbar h1{
-    background: text linear-gradient(to left, rgb(255, 255, 255), rgb(100, 255, 130), rgb(0, 152, 0), rgb(255, 0, 0));
-    animation: animated 6s linear infinite;
-    display: inline;
-    color: transparent;
-}
-@keyframes animated {
-    to {
-        background-position-x: 500px;
-    }
-}
-.navbar input {
-    width: 330px;
-    height: 40px;
-    padding: 20px;
-    outline: none;
-    border: none;
-    background: transparent;
-    backdrop-filter: blur(5px);
-    border-radius: 10px;
-    color: #48ff5e;
-    box-shadow: 3px 3px 20px rgba(255, 255, 255, 0.5);
+
+
+
+.navbar input:hover {
+    color: var(--denary);
+    transition: all 0.2s linear;
 }
 
 .navbar input::placeholder {
-    color: snow;
+    color: var(--senary);
     padding: 10px;
+    font-size: 1.1rem;
 }
 
 .navbar input:focus {
-    box-shadow: 3px 3px 10px rgba(100, 255, 130, 0.5), -3px -3px 10px rgba(100, 255, 130, 0.5);
-    backdrop-filter: blur(0);
+    color: var(--quaternary);
 }
 
 .navbar input:hover::placeholder {
-    color: rgb(72, 255, 94);
-    font-size: 1rem;
-    transition: all 0.3s linear;
+    color: var(--denary);
+    transition: all 0.2s linear;
 }
 
-.navbar i {
+.container .search-box i {
     position: relative;
     left: 30px;
+    top: 5px;
+    font-size: 1.5rem;
+}
+
+.add-contact {
+    display: flex;
+    margin: 10px 0;
+    padding: 20px;
+
+}
+
+.add-contact button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    background-color: var(--nonary);
+    border-radius: 13px;
+    color: var(--septenary);
+    outline: none;
+    border: 1px solid var(--nonary);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.add-contact button svg {
+    font-size: 1.7rem;
+}
+
+.add-contact button:hover {
+    color: var(--denary);
+    transition: all 0.2s linear;
+}
+
+/*All Styles for Form ==> AddContact*/
+
+#section-from {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    box-shadow: 1px 1px 3px var(--septenary), -1px -1px 3px var(--septenary);
+}
+
+#section-from form {
+    display: flex;
+    flex-direction: column;
+}
+
+#section-from form input {
+    margin: 10px 0;
+}
+
+#section-from form input:hover::placeholder {
+    color: var(--denary);
+}
+
+#select {
+    height: 45px;
+    width: 330px;
+    background-color: var(--nonary);
+    color: var(--senary);
+    font-size: 1.1rem;
+}
+
+#select:hover {
+    color: var(--septenary);
+}
+
+#select:focus {
+    background-color: var(--primary);
+    color: var(--denary);
+}
+
+#edit-container form button,
+#section-from form button {
+    margin: 20px;
+    padding: 15px;
+    font-size: 1.1rem;
+    outline: none;
+    border: none;
+    border-radius: 13px;
+    color: var(--primary);
+    background-color: var(--secoundary);
+    cursor: pointer;
+}
+
+#section-from form button:hover {
+    background-color: var(--nonary);
+    color: var(--secoundary);
+    transition: all 0.2s linear;
+}
+
+#section-from form a {
+    color: var(--denary);
+    font-size: 1.2rem;
+}
+
+#section-from form a:hover {
+    color: var(--tertiary);
+}
+
+/*All Style For Contact*/
+.card-container {
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 600px;
+    box-shadow: 1px 1px 5px var(--octonary), -1px -1px 5px var(--octonary);
+}
+
+.card-container .card-photo img {
+    margin: 0 10px 0 0;
+    width: 200px;
+    height: 200px;
+}
+
+.card-container .card-info {
+    width: 350px;
+    text-align: right;
+}
+
+.card-container .card-info ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container .card-info li {
+    color: var(--secoundary);
+    margin: 10px;
+}
+
+.card-container .card-info li span {
+    color: var(--octonary);
+}
+
+.card-container .card-buttons {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+.card-container .card-buttons svg {
+    margin: 10px 0 10px 20px;
+    text-align: center;
+}
+
+.card-container .card-buttons svg:hover {
+    color: var(--secoundary);
+}
+
+.card-container .card-buttons .view-icon {
+    color: var(--denary);
+}
+
+.card-container .card-buttons .edit-icon {
+    color: var(--quaternary);
+}
+
+.card-container .card-buttons .delete-icon {
+    color: var(--tertiary);
+}
+
+/*َAll Style For viewContact*/
+#view-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 1px 1px 10px var(--septenary), -1px -1px 10px var(--septenary);
+}
+
+#view-container .contact-info ul li {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: 1px dashed var(--septenary);
+
+}
+
+#view-container a svg {
+    font-size: 3rem;
+    color: var(--denary);
+}
+
+#view-container .contact-info ul li span {
+    color: var(--secoundary);
+}
+
+/*All Style Edit Contact*/
+#edit-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 1px 1px 10px var(--septenary), -1px -1px 10px var(--septenary);
+}
+
+#btn-edit {
+    background-color: transparent;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+}
+#btn-edit i {
+    text-align: center;
+    cursor: pointer;
+}
+
+#edit-container .edit-form-btn a {
+    font-size: 1.5rem;
+    color: var(--tertiary);
+}
+
+#edit-container form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#edit-container form input {
+    margin: 10px 0;
+    color: var(--septenary);
+}
+
+#edit-container form input:hover {
+    color: var(--octonary);
+    cursor: pointer;
 }

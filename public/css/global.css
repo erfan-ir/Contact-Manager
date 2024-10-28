@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style-type: none;
 }
 
 @font-face {
@@ -19,7 +20,8 @@
 
 body {
     font-family: "Vazir";
-    background: url(../images/background.jpg) no-repeat fixed center;
+    /* background: url(../images/background.jpg) no-repeat fixed center; */
+    background-color: #121212;
     background-size: cover;
     color: snow;
 }
